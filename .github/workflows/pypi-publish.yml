@@ -27,7 +27,6 @@ jobs:
         --outdir dist/
         .
 
-    - uses: fkirc/skip-duplicate-actions@master
     - name: Publish distribution to PyPI
       if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
       uses: pypa/gh-action-pypi-publish@master
